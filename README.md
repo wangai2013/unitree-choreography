@@ -115,3 +115,33 @@ Day 14 群控舞蹈（毕业作品）
 ## License
 
 MIT
+
+
+---
+
+## 真机部署
+
+从 "MuJoCo 仿真" 到 "真实宇树 Go2" —— 详见 docs/real_robot_deploy.md
+
+核心思路：
+- DDS 协议不变（rt/lowcmd / rt/lowstate）
+- 改 3 行代码（网络接口 + 删 MuJoCo）
+- 直接可用（同一套 SDK）
+
+仿真：
+    ChannelFactoryInitialize(0, "lo0")
+
+真机：
+    ChannelFactoryInitialize(0, "en0")
+
+---
+
+## 学习成果
+
+- 19 天从零到"群控编舞系统"
+- 单机 + 双机 + 4 台 + 10 台群控
+- 音乐同步 + JSON 编排
+- DDS 通信 + Sim-to-Real 路径
+- 一套完整的学习笔记
+
+这是一个"从学习到作品"的完整闭环。
