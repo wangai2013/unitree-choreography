@@ -22,7 +22,7 @@
 ## 安装
 
 1. 克隆仓库：
-   git clone https://github.com/your-username/unitree-choreography.git
+   git clone https://github.com/你的真实用户名/unitree-choreography.git
    cd unitree-choreography
 
 2. 创建虚拟环境：
