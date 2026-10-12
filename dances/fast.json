@@ -1,0 +1,20 @@
+{
+  "name": "Fast Dance",
+  "description": "快节奏活力舞蹈（BPM 140）",
+  "bpm": 140,
+  "beats_per_action": 2,
+  "music": "music/fast.mp3",
+  "sequence": [
+    {"action": "stand", "beats": 2},
+    {"action": "nod",   "beats": 2},
+    {"action": "sway",  "beats": 2},
+    {"action": "nod",   "beats": 2},
+    {"action": "jump",  "beats": 2},
+    {"action": "squat", "beats": 2},
+    {"action": "jump",  "beats": 2},
+    {"action": "sway",  "beats": 2},
+    {"action": "bow",   "beats": 2},
+    {"action": "nod",   "beats": 2},
+    {"action": "stand", "beats": 2}
+  ]
+}

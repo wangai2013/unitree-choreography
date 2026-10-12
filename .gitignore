@@ -1,4 +1,15 @@
-venv/
 __pycache__/
 *.pyc
+*.pyo
+venv/
+.venv/
 unitree_mujoco/
+unitree_sdk2_python/
+MUJOCO_LOG.TXT
+.DS_Store
+music.mp3
+*.wav
+videos/*.mp4
+videos/*.mov
+.vscode/
+.idea/

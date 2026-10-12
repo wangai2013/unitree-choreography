@@ -1,0 +1,17 @@
+{
+  "name": "Medium Dance",
+  "description": "中速标准舞蹈（BPM 100）",
+  "bpm": 100,
+  "beats_per_action": 4,
+  "music": "music/medium.mp3",
+  "sequence": [
+    {"action": "stand", "beats": 2},
+    {"action": "nod",   "beats": 4},
+    {"action": "sway",  "beats": 4},
+    {"action": "bow",   "beats": 4},
+    {"action": "squat", "beats": 4},
+    {"action": "nod",   "beats": 4},
+    {"action": "sway",  "beats": 4},
+    {"action": "stand", "beats": 2}
+  ]
+}

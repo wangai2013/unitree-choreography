@@ -1,0 +1,17 @@
+{
+  "name": "Day 7 测试舞蹈",
+  "description": "一段 20 秒的基础舞蹈",
+  "total_duration": 20.0,
+  "sequence": [
+    {"action": "stand", "duration": 1.0},
+    {"action": "nod",   "duration": 2.0},
+    {"action": "sway",  "duration": 2.0},
+    {"action": "bow",   "duration": 2.0},
+    {"action": "squat", "duration": 2.0},
+    {"action": "jump",  "duration": 2.0},
+    {"action": "nod",   "duration": 2.0},
+    {"action": "sway",  "duration": 2.0},
+    {"action": "bow",   "duration": 2.0},
+    {"action": "stand", "duration": 1.0}
+  ]
+}

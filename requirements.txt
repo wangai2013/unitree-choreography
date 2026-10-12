@@ -1,0 +1,10 @@
+mujoco>=3.0
+numpy
+scipy
+pyyaml
+matplotlib
+librosa
+soundfile
+pygame
+torch
+torchvision

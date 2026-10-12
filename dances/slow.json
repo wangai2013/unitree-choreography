@@ -1,0 +1,16 @@
+{
+  "name": "Slow Dance",
+  "description": "慢节奏抒情舞蹈（BPM 60）",
+  "bpm": 60,
+  "beats_per_action": 4,
+  "music": "music/slow.mp3",
+  "sequence": [
+    {"action": "stand", "beats": 4},
+    {"action": "nod",   "beats": 4},
+    {"action": "bow",   "beats": 4},
+    {"action": "nod",   "beats": 4},
+    {"action": "sway",  "beats": 4},
+    {"action": "bow",   "beats": 4},
+    {"action": "stand", "beats": 4}
+  ]
+}
