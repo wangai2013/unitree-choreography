@@ -83,3 +83,48 @@ ACTIONS = {
     "squat": act_squat,
     "jump":  act_jump,
 }
+
+# ===== Day 17: 新增动作 =====
+
+def act_wave_hi(t_local, duration):
+    """挥手打招呼：前腿抬起 + 挥动"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    phase = t_local / duration
+    lift_curve = np.sin(np.pi * phase)
+    lift = 0.4 * lift_curve * f
+    target[1] = 0.8 + lift * 0.6     # FR 大腿抬起
+    target[2] = -1.5 + lift * 1.2    # FR 小腿伸展
+    wave = 0.3 * np.sin(2 * np.pi * 3.0 * t_local) * f
+    target[2] += wave
+    # 其他三条腿撑地
+    target[4] += 0.08 * f
+    target[7] += 0.08 * f
+    target[10] += 0.08 * f
+    return target
+
+def act_kick(t_local, duration):
+    """踢腿：后腿往前踢"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    phase = t_local / duration
+    kick_curve = np.sin(np.pi * phase) * f
+    # RR 腿踢出
+    target[7] = 0.8 - 0.5 * kick_curve   # RR 大腿往前
+    target[8] = -1.5 + 0.8 * kick_curve  # RR 小腿伸直
+    return target
+
+def act_spin(t_local, duration):
+    """转圈（简化）：髋关节摆动 + 机身转向"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    phase = t_local / duration
+    spin_curve = np.sin(2 * np.pi * 2.0 * t_local) * f
+    # 四条腿同时摆动
+    for leg in range(4):
+        target[leg * 3 + 0] = 0.3 * spin_curve
+    return target
+
+ACTIONS["wave_hi"] = act_wave_hi
+ACTIONS["kick"] = act_kick
+ACTIONS["spin"] = act_spin
