@@ -1,0 +1,16 @@
+{
+  "name": "4 台群控演示",
+  "description": "4 台 Go2 群控舞蹈（含音乐）",
+  "bpm": 100,
+  "music": "music.mp3",
+  "beats_per_action": 4,
+  "formation": [[-1.2, -0.6], [1.2, -0.6], [-1.2, 0.6], [1.2, 0.6]],
+  "sequence": [
+    {"action": "stand",       "beats": 4},
+    {"action": "sync_nod",    "beats": 8},
+    {"action": "wave_nod",    "beats": 8},
+    {"action": "mirror_sway", "beats": 8},
+    {"action": "sync_nod",    "beats": 8},
+    {"action": "stand",       "beats": 4}
+  ]
+}
