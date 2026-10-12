@@ -25,19 +25,18 @@ KP, KD = 400.0, 20.0
 print("=" * 60)
 print("🎬 Go2 左右摇摆（0.8 Hz，振幅 ±0.4）")
 print("=" * 60)
-
 step = 0
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():
         t = step * 0.001
 
         target = STAND.copy()
-        sway = 0.4 * np.sin(2 * np.pi * 0.8 * t)
+        sway = 0.1 * np.sin(2 * np.pi * 0.8 * t)
         # 所有髋关节同步摆动（ctrl[0], ctrl[3], ctrl[6], ctrl[9]）
-        target[0] = sway
-        target[3] = sway
-        target[6] = sway
-        target[9] = sway
+        target[2] =-1.5 + sway 
+        target[5] =-1.5 - sway 
+        target[8] =-1.5 + sway 
+        target[11] =-1.5 - sway 
 
         pd_control(model, data, CTRL_TO_QPOS, CTRL_TO_QVEL, target, KP, KD)
 
