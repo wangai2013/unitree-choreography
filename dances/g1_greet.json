@@ -1,0 +1,41 @@
+{
+  "name": "G1 打招呼",
+  "description": "G1 编舞（挥手 + 鞠躬 + 转身），无头部关节",
+  "sequence": [
+    {
+      "action": "stand",
+      "duration": 1.5,
+      "desc": "站好"
+    },
+    {
+      "action": "wave_hand",
+      "duration": 3.0,
+      "desc": "挥手"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "停顿"
+    },
+    {
+      "action": "bow",
+      "duration": 2.0,
+      "desc": "鞠躬"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "站起"
+    },
+    {
+      "action": "turn_left",
+      "duration": 2.0,
+      "desc": "转身"
+    },
+    {
+      "action": "stand",
+      "duration": 1.5,
+      "desc": "站好"
+    }
+  ]
+}
