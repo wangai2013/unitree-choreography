@@ -1,6 +1,6 @@
 {
   "name": "G1 打招呼",
-  "description": "G1 编舞（挥手 + 鞠躬 + 转身），无头部关节",
+  "description": "友好问候（挥手 + 鞠躬 + 转身）",
   "sequence": [
     {
       "action": "stand",

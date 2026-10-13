@@ -1,0 +1,46 @@
+{
+  "name": "G1 热情欢迎",
+  "description": "热情洋溢（双手挥 + 挥手 + 转身）",
+  "sequence": [
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "站好"
+    },
+    {
+      "action": "wave_both",
+      "duration": 4.0,
+      "desc": "双手挥"
+    },
+    {
+      "action": "stand",
+      "duration": 0.5,
+      "desc": "停顿"
+    },
+    {
+      "action": "wave_hand",
+      "duration": 3.0,
+      "desc": "单手挥"
+    },
+    {
+      "action": "stand",
+      "duration": 0.5,
+      "desc": "停顿"
+    },
+    {
+      "action": "turn_left",
+      "duration": 2.0,
+      "desc": "转身"
+    },
+    {
+      "action": "wave_hand",
+      "duration": 3.0,
+      "desc": "再挥"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "站好"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "G1 正式致意",
+  "description": "正式礼节（鞠躬 + 转身 + 鞠躬）",
+  "sequence": [
+    {
+      "action": "stand",
+      "duration": 2.0,
+      "desc": "站好"
+    },
+    {
+      "action": "bow",
+      "duration": 2.5,
+      "desc": "鞠躬"
+    },
+    {
+      "action": "stand",
+      "duration": 1.5,
+      "desc": "站起"
+    },
+    {
+      "action": "turn_left",
+      "duration": 2.0,
+      "desc": "转身"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "停顿"
+    },
+    {
+      "action": "bow",
+      "duration": 2.5,
+      "desc": "再鞠躬"
+    },
+    {
+      "action": "stand",
+      "duration": 1.5,
+      "desc": "站好"
+    }
+  ]
+}

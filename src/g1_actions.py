@@ -52,7 +52,7 @@ def act_turn_left(t, d):
 def act_wave_both(t, d):
     target = STAND.copy()
     f = fade(t, d)
-    target[15] = 0.0; target[16] = -1.2; target[18] = -1.2; target[19] = -1.57
+    target[15] = 0.0; target[16] = -1.2; target[18] = -1.2; target[19] = +1.57
     target[22] = 0.0; target[23] =  1.2; target[25] = -1.2; target[26] = -1.57
     wave = 0.5 * np.sin(2 * np.pi * 2.0 * t) * f
     target[17] = -wave
