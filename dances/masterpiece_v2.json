@@ -1,0 +1,106 @@
+{
+  "name": "Masterpiece v2",
+  "description": "优化版作品（呼应 + 递进 + 故事 + 队形）",
+  "bpm": 100,
+  "music": "music.mp3",
+  "beats_per_action": 4,
+  "structure": {
+    "act1": {
+      "name": "安静",
+      "formation": "square",
+      "beats": 8
+    },
+    "act2": {
+      "name": "觉醒",
+      "formation": "diamond",
+      "beats": 8
+    },
+    "act3": {
+      "name": "爆发",
+      "formation": "circle",
+      "beats": 12
+    },
+    "act4": {
+      "name": "收束",
+      "formation": "square",
+      "beats": 8
+    }
+  },
+  "sequence": [
+    {
+      "action": "stand",
+      "beats": 4,
+      "formation": "square"
+    },
+    {
+      "action": "sway",
+      "beats": 4,
+      "formation": "square"
+    },
+    {
+      "action": "stand",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "nod",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "nod",
+      "beats": 4,
+      "formation": "diamond"
+    },
+    {
+      "action": "shake",
+      "beats": 4,
+      "formation": "diamond"
+    },
+    {
+      "action": "stretch",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "squat",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "dance_spin",
+      "beats": 4,
+      "formation": "circle"
+    },
+    {
+      "action": "shake",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "nod",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "bow",
+      "beats": 4,
+      "formation": "square"
+    },
+    {
+      "action": "sway",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "nod",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "stand",
+      "beats": 4,
+      "formation": "square"
+    }
+  ]
+}

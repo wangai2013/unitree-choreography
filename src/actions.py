@@ -128,3 +128,64 @@ def act_spin(t_local, duration):
 ACTIONS["wave_hi"] = act_wave_hi
 ACTIONS["kick"] = act_kick
 ACTIONS["spin"] = act_spin
+
+# ============================================
+# Day 21: 新增 4 个动作
+# ============================================
+
+def act_shake(t_local, duration):
+    """摇头：身体左右摆动（髋关节反相）"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    # 用 3 Hz 快速摆动
+    shake = 0.3 * np.sin(2 * np.pi * 3.0 * t_local) * f
+    # 前后腿反相
+    target[0] = shake        # FR hip
+    target[3] = -shake       # FL hip
+    target[6] = -shake       # RR hip
+    target[9] = shake        # RL hip
+    return target
+
+def act_stretch(t_local, duration):
+    """伸展：腿伸直 + 身体抬高"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    phase = t_local / duration
+    # 半波：0 → 1 → 0
+    stretch = np.sin(np.pi * phase) * f
+    # 所有腿"伸直"（小腿角度加大）
+    for leg in range(4):
+        target[leg * 3 + 2] = -1.5 + 0.5 * stretch
+    return target
+
+def act_sit(t_local, duration):
+    """坐下：后半身下沉（后腿折叠）"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    phase = t_local / duration
+    sit_curve = np.sin(np.pi * phase) * f
+    # 后腿（RL, RR）大腿抬起
+    target[7] = 0.8 + 0.6 * sit_curve      # RR 大腿
+    target[10] = 0.8 + 0.6 * sit_curve     # RL 大腿
+    # 后腿小腿收起
+    target[8] = -1.5 - 0.4 * sit_curve
+    target[11] = -1.5 - 0.4 * sit_curve
+    return target
+
+def act_dance_spin(t_local, duration):
+    """原地转圈：所有髋关节同向摆动"""
+    target = STAND.copy()
+    f = fade(t_local, duration)
+    spin = 0.4 * np.sin(2 * np.pi * 1.5 * t_local) * f
+    # 所有髋关节同向
+    for leg in range(4):
+        target[leg * 3 + 0] = spin
+    return target
+
+# 注册
+ACTIONS["shake"] = act_shake
+ACTIONS["stretch"] = act_stretch
+ACTIONS["sit"] = act_sit
+ACTIONS["dance_spin"] = act_dance_spin
+
+print(f"✅ 动作库现有 {len(ACTIONS)} 个动作")

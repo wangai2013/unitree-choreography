@@ -1,0 +1,22 @@
+{
+  "name": "Masterpiece Dance",
+  "description": "30 秒作品级舞蹈（4 台 Go2，多动作 + 队形）",
+  "bpm": 100,
+  "music": "music.mp3",
+  "beats_per_action": 4,
+  "formation": [
+    [-1.2, -0.6], [1.2, -0.6], [-1.2, 0.6], [1.2, 0.6]
+  ],
+  "sequence": [
+    {"action": "stand",     "beats": 4},
+    {"action": "nod",       "beats": 4},
+    {"action": "shake",     "beats": 4},
+    {"action": "nod",       "beats": 4},
+    {"action": "stretch",   "beats": 4},
+    {"action": "squat",     "beats": 4},
+    {"action": "dance_spin","beats": 6},
+    {"action": "bow",       "beats": 4},
+    {"action": "sit",       "beats": 4},
+    {"action": "stand",     "beats": 4}
+  ]
+}

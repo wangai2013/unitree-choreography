@@ -1,0 +1,73 @@
+{
+  "name": "Masterpiece v3 (全身版)",
+  "description": "腿动 + 机身动（俯仰/侧倾/偏航）",
+  "bpm": 120,
+  "music": "music.mp3",
+  "sequence": [
+    {
+      "action": "stand",
+      "beats": 4,
+      "formation": "square"
+    },
+    {
+      "action": "nod",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "stand",
+      "beats": 1,
+      "formation": "square"
+    },
+    {
+      "action": "nod",
+      "beats": 2,
+      "formation": "square"
+    },
+    {
+      "action": "stand",
+      "beats": 1,
+      "formation": "square"
+    },
+    {
+      "action": "sway",
+      "beats": 4,
+      "formation": "diamond"
+    },
+    {
+      "action": "stand",
+      "beats": 2,
+      "formation": "diamond"
+    },
+    {
+      "action": "shake",
+      "beats": 4,
+      "formation": "circle"
+    },
+    {
+      "action": "stretch",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "squat",
+      "beats": 2,
+      "formation": "circle"
+    },
+    {
+      "action": "dance_spin",
+      "beats": 4,
+      "formation": "circle"
+    },
+    {
+      "action": "bow",
+      "beats": 4,
+      "formation": "square"
+    },
+    {
+      "action": "stand",
+      "beats": 4,
+      "formation": "square"
+    }
+  ]
+}

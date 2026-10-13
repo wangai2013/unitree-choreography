@@ -55,34 +55,33 @@ print("  4s+:  大臂 yaw 摆动")
 print("=" * 60)
 
 step = 0
+last_target_25 = 0.0
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():
-        t = step * 0.003
+        t = step * 0.002
+        
         target = STAND.copy()
 
         if t < 2.0:
             pass
         elif t < 3.0:
             p = (t - 2.0) / 1.0
-            target[22] = 0.4 + (0.0 - 0.4) * p
+            val_25 = 0.5 + (-1.2 - 0.8) * p
+            target[22] = 0.3 + (0.0 - 0.4) * p
             target[23] = -0.1 + (ROLL_TARGET - (-0.1)) * p
-            target[25] = 0.8 + (-1.2 - 0.8) * p
-        elif t < 4.0:
-            p = (t - 3.0) / 1.0
-            target[22] = 0.0
-            target[23] = ROLL_TARGET
-            target[25] = -1.2
+            target[25] = val_25
             target[26] = -1.57 * p
+            last_target_25 = val_25
         else:
-            target[22] = 0.0
+            target[22] = -0.1
             target[23] = ROLL_TARGET
-            target[25] = -1.2
+            target[25] = last_target_25
             target[26] = -1.57
 
             t_wave = t - 4.0
             wave = np.sin(2 * np.pi * 1.0 * t_wave)
 
-            target[24] = 0.7 * wave
+            target[24] = 0.7 * wave + 0.5
 
         if step % 200 == 0:
             print(f"t={t:5.2f}s | roll={target[23]:.4f} | yaw={target[24]:+.2f}")
