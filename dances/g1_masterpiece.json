@@ -1,0 +1,71 @@
+{
+  "name": "G1 毕业作品",
+  "description": "G1 完整编舞（30 秒）—— 打招呼 + 鞠躬 + 转身 + 双手挥 + 收尾",
+  "sequence": [
+    {
+      "action": "stand",
+      "duration": 2.0,
+      "desc": "站好"
+    },
+    {
+      "action": "wave_hand",
+      "duration": 3.0,
+      "desc": "挥手"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "停顿"
+    },
+    {
+      "action": "bow",
+      "duration": 2.5,
+      "desc": "鞠躬"
+    },
+    {
+      "action": "stand",
+      "duration": 1.5,
+      "desc": "站起"
+    },
+    {
+      "action": "turn_left",
+      "duration": 2.5,
+      "desc": "转身"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "停顿"
+    },
+    {
+      "action": "wave_both",
+      "duration": 4.0,
+      "desc": "双手挥"
+    },
+    {
+      "action": "stand",
+      "duration": 1.0,
+      "desc": "停顿"
+    },
+    {
+      "action": "bow",
+      "duration": 2.5,
+      "desc": "鞠躬"
+    },
+    {
+      "action": "stand",
+      "duration": 2.0,
+      "desc": "站好"
+    },
+    {
+      "action": "wave_hand",
+      "duration": 3.0,
+      "desc": "最后挥手"
+    },
+    {
+      "action": "stand",
+      "duration": 2.0,
+      "desc": "站定"
+    }
+  ]
+}

@@ -145,3 +145,47 @@ MIT
 - 一套完整的学习笔记
 
 这是一个"从学习到作品"的完整闭环。
+
+
+---
+
+## 🧍 G1 人形机器人编舞（Day 25-30）
+
+**从"四足 Go2"到"人形 G1"** —— 完整编舞系统。
+
+### 能力
+- ✅ G1 站立（锁机身）
+- ✅ 挥手 / 鞠躬 / 转身 / 双手挥
+- ✅ 编舞系统（JSON 驱动）
+- ✅ 音乐驱动
+- ✅ 左右臂镜像
+
+### 文件
+- `src/g1_actions.py` —— G1 动作库（8+ 个动作）
+- `dances/g1_*.json` —— G1 舞蹈
+- `examples/day28_g1_player.py` —— G1 播放器
+- `examples/day29_g1_music.py` —— G1 音乐驱动
+
+### 运行示例
+
+打招呼：
+
+    mjpython examples/day28_g1_player.py dances/g1_greet.json
+
+热情：
+
+    mjpython examples/day28_g1_player.py dances/g1_enthusiastic.json
+
+正式：
+
+    mjpython examples/day28_g1_player.py dances/g1_formal.json
+
+音乐：
+
+    mjpython examples/day29_g1_music.py
+
+毕业作品：
+
+    mjpython examples/day28_g1_player.py dances/g1_masterpiece.json
+
+**"两栖机器人编舞"** = **Go2（四足） + G1（人形）**。

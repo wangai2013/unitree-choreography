@@ -66,3 +66,49 @@ ACTIONS = {
     "turn_left":  act_turn_left,
     "wave_both":  act_wave_both,
 }
+
+
+# ========== Day 30: 新增动作 ==========
+
+def act_wave_slow(t, d):
+    """慢挥手（更优雅）"""
+    target = STAND.copy()
+    f = fade(t, d)
+    target[22] = 0.0
+    target[23] = 1.3
+    target[25] = -1.0
+    target[26] = -1.57
+    wave = 0.6 * np.sin(2 * np.pi * 0.8 * t) * f  # 慢频
+    target[24] = wave
+    return target
+
+def act_nod_double(t, d):
+    """双点头（快速两次）"""
+    target = STAND.copy()
+    f = fade(t, d)
+    swing = 0.3 * np.sin(2 * np.pi * 1.5 * t) * f
+    target[14] = swing   # waist_pitch
+    return target
+
+def act_cheer(t, d):
+    """欢呼（双手向上）"""
+    target = STAND.copy()
+    f = fade(t, d)
+    phase = t / d
+    s = np.sin(np.pi * phase) * f
+
+    # 双臂向上
+    target[15] = 0.0; target[16] = -1.8; target[18] = -1.5; target[19] = 1.57
+    target[22] = 0.0; target[23] =  1.8; target[25] = -1.5; target[26] = -1.57
+
+    # 腰 pitch 前倾
+    target[14] = 0.2 * s
+
+    return target
+
+# 注册
+ACTIONS["wave_slow"] = act_wave_slow
+ACTIONS["nod_double"] = act_nod_double
+ACTIONS["cheer"] = act_cheer
+
+print("✅ 新增 3 个动作: wave_slow, nod_double, cheer")
