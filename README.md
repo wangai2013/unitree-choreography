@@ -189,3 +189,102 @@ MIT
     mjpython examples/day28_g1_player.py dances/g1_masterpiece.json
 
 **"两栖机器人编舞"** = **Go2（四足） + G1（人形）**。
+
+
+---
+
+## 🎬 G1 群控编舞（Day 31-37）
+
+**从"单台 G1"到"10 台阅兵式"** —— 人形机器人群控完整实现。
+
+### 能力
+- ✅ 2 台 / 4 台 / 6 台 / **10 台** G1 群控
+- ✅ **4 种模式**：同步 / 波浪 / 镜像 / 对角
+- ✅ **10 台 + 音乐**（节拍驱动）
+- ✅ **阅兵式**（5×2 方阵）
+
+### 文件
+- `examples/day31_g1_dual_view.py` —— 2 台 G1
+- `examples/day32_g1_dual_modes.py` —— 2 台 4 种模式
+- `examples/day33_g1_quad_view.py` —— 4 台 G1
+- `examples/day34_g1_quad_modes.py` —— 4 台群控编舞
+- `examples/day35_g1_hexa_parade.py` —— 6 台阅兵
+- `examples/day36_g1_deca_parade.py` —— 10 台阅兵
+- `examples/day37_g1_deca_music.py` —— 10 台 + 音乐
+
+### 运行示例
+
+2 台 G1 群控：
+
+    cd ~/unitree-dev
+    source venv/bin/activate
+    mjpython examples/day32_g1_dual_modes.py
+
+10 台 G1 阅兵：
+
+    mjpython examples/day36_g1_deca_parade.py
+
+10 台 G1 + 音乐：
+
+    mjpython examples/day37_g1_deca_music.py
+
+---
+
+## 📊 项目总览（37 天）
+
+### 阶段 1：Go2 四足（Day 1-14）
+- 环境搭建（Mac M5 + MuJoCo）
+- SDK + DDS 通信
+- PD 控制 + 站立
+- 周期动作（点头 / 摇摆 / 走路）
+- 编舞系统（JSON 驱动）
+- 音乐同步（librosa + pygame）
+- 单机 → 双机 → 4 台 → 10 台群控
+
+### 阶段 2：Go2 进阶（Day 15-24）
+- 编舞优化（幅度 / 频率 / 队形）
+- 全身动作（腿 + 机身）
+- PD 驱动 + 混合约束
+- DDS 控制仿真
+- 真机部署文档
+
+### 阶段 3：G1 人形（Day 25-30）
+- G1 站立（29dof，锁机身）
+- 挥手 / 鞠躬 / 转身
+- 编舞系统（JSON + 动作库）
+- 30 秒毕业作品
+
+### 阶段 4：G1 群控（Day 31-37）
+- 2 台 / 4 台 / 6 台 / 10 台
+- 同步 / 波浪 / 镜像 / 对角
+- 音乐群控
+
+---
+
+## 🛠️ 环境要求
+
+- Mac M5（Apple Silicon）
+- Python 3.10（venv 虚拟环境）
+- MuJoCo 3.x
+- librosa + pygame（音频）
+- unitree_sdk2py + cyclonedds
+
+---
+
+## 📝 每次运行前必做
+
+    cd ~/unitree-dev
+    source venv/bin/activate      # ⭐ 必须
+    which mjpython                 # 确认是 venv/bin/mjpython
+    mjpython xxx.py
+
+---
+
+## 🎓 学习成果
+
+- ✅ 从"零基础"到"两栖机器人编舞工程师"
+- ✅ Go2 四足 + G1 人形，单机 + 群控
+- ✅ 37 天完整代码 + 文档 + GitHub
+- ✅ "阅兵级"人形群控（10 台）
+
+**"两栖机器人编舞"** = **Go2（四足） + G1（人形）**。
